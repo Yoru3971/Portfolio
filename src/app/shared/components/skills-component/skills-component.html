@@ -1,0 +1,28 @@
+<section id="skills" class="skills section">
+  <div class="skills__container">
+    <div class="skills__header fade-in-up delay-1">
+      <h2 class="section-title">{{ 'SKILLS.TITLE' | translate }}<span class="dot">.</span></h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="skills__grid">
+      <div class="skills__column fade-in-up delay-2">
+        <h3 class="column-title">{{ 'SKILLS.TECH_TITLE' | translate }}</h3>
+        <div class="chips-container">
+          @for (skill of 'SKILLS.HARD' | translate; track skill.name) {
+            <span class="chip"> <i [class]="skill.icon"></i> {{ skill.name }} </span>
+          }
+        </div>
+      </div>
+
+      <div class="skills__column fade-in-up delay-3">
+        <h3 class="column-title">{{ 'SKILLS.SOFT_TITLE' | translate }}</h3>
+        <div class="chips-container">
+          @for (skill of 'SKILLS.SOFT' | translate; track skill.name) {
+            <span class="chip"> <i [class]="skill.icon"></i> {{ skill.name }} </span>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

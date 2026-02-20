@@ -1,7 +1,7 @@
 {
   "NAVBAR": {
     "ABOUT": "About me",
-    "STACK": "Stack",
+    "SKILLS": "Skills",
     "PROJECTS": "Projects",
     "CONTACT": "Contact",
     "RESUME": "Download CV"
@@ -12,5 +12,35 @@
     "PHRASE": "Done is better than perfect.",
     "CTA_PRIMARY": "View projects",
     "CTA_SECONDARY": "Contact me"
+  },
+  "ABOUT": {
+    "TITLE": "About me",
+    "BIO_P1": "My journey began studying Physics, driven by a curiosity to understand how things work. In parallel, I taught myself programming, an interest that quickly turned into a passion and led me to fully transition my career towards software engineering. I graduated with a Technical Degree in Programming from UTN, establishing a solid foundation in modern development practices.",
+    "BIO_P2": "I have experience building RESTful APIs with Spring Boot, frontend development with Angular, applying design patterns, clean architecture, and agile methodologies within multidisciplinary teams. I enjoy tackling complex problems and transforming them into scalable and maintainable solutions.",
+    "BIO_P3": "My curiosity and proactivity constantly push me to dive deep into Research and Development (R&D) in unknown areas. This has led me to tackle challenging projects, ranging from video game modding and reverse engineering to the implementation of RAG models integrating Artificial Intelligence."
+  },
+  "SKILLS": {
+    "TITLE": "Skills",
+    "TECH_TITLE": "Hard Skills",
+    "SOFT_TITLE": "Soft Skills",
+    "HARD": [
+      { "name": "Java", "icon": "fa-brands fa-java" },
+      { "name": "Spring Boot", "icon": "fa-solid fa-leaf" },
+      { "name": "JPA / Hibernate", "icon": "fa-solid fa-database" },
+      { "name": "Angular", "icon": "fa-brands fa-angular" },
+      { "name": "MySQL", "icon": "fa-solid fa-server" },
+      { "name": "Postman", "icon": "fa-solid fa-rocket" },
+      { "name": "Jira / Trello", "icon": "fa-brands fa-trello" },
+      { "name": "Git", "icon": "fa-brands fa-git" },
+      { "name": "GitHub", "icon": "fa-brands fa-github" },
+      { "name": "English B2", "icon": "fa-solid fa-language" }
+    ],
+    "SOFT": [
+      { "name": "Problem Solving", "icon": "fa-solid fa-puzzle-piece" },
+      { "name": "Agile Methodologies", "icon": "fa-solid fa-arrows-spin" },
+      { "name": "Continuous Learning", "icon": "fa-solid fa-book-open" },
+      { "name": "Proactivity", "icon": "fa-solid fa-bolt" },
+      { "name": "Teamwork", "icon": "fa-solid fa-users" }
+    ]
   }
 }

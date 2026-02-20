@@ -38,7 +38,7 @@ export class NavBar {
   @HostListener('window:scroll')
   onScroll(): void {
     this.closeMenu();
-    const sections = ['about', 'stack', 'projects', 'contact'];
+    const sections = ['about', 'skills', 'projects', 'contact'];
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     const offset = 150;
 
