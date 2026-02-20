@@ -1,39 +1,36 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable, signal, computed } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  private isLightMode = new BehaviorSubject<boolean>(false);
-  isLightMode$ = this.isLightMode.asObservable();
+  private readonly STORAGE_KEY = 'app-theme';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.detectSystemPreference();
-    }
+  private _isLight = signal<boolean>(true);
+  isLight = this._isLight.asReadonly();
+
+  theme = computed(() => (this._isLight() ? 'light' : 'dark'));
+
+  constructor() {
+    this.initTheme();
+  }
+
+  private initTheme(): void {
+    const savedTheme = localStorage.getItem(this.STORAGE_KEY);
+    const isLight = savedTheme ? savedTheme === 'light' : true;
+
+    this.setTheme(isLight);
   }
 
   toggleTheme(): void {
-    const newValue = !this.isLightMode.value;
-    this.isLightMode.next(newValue);
-    if (isPlatformBrowser(this.platformId)) {
-      this.applyTheme(newValue);
-    }
+    this.setTheme(!this._isLight());
   }
 
-  private applyTheme(isLight: boolean): void {
-    if (isLight) {
-      document.body.classList.add('light-theme');
-    } else {
-      document.body.classList.remove('light-theme');
-    }
-  }
+  private setTheme(isLight: boolean): void {
+    this._isLight.set(isLight);
 
-  private detectSystemPreference(): void {
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    this.isLightMode.next(prefersLight);
-    this.applyTheme(prefersLight);
+    localStorage.setItem(this.STORAGE_KEY, isLight ? 'light' : 'dark');
+
+    document.body.classList.toggle('light-theme', isLight);
   }
 }

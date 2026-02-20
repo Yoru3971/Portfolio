@@ -1,0 +1,38 @@
+<section id="hero" class="hero">
+  <div class="hero__glow"></div>
+
+  <div class="hero__container">
+    <div class="hero__wrapper">
+      <div class="hero__photo-column fade-in-up delay-1">
+        <div class="photo-frame">
+          <img
+            src="assets/images/profile-photo.jpg"
+            alt="Foto de perfil de Emiliano Daverio"
+            class="photo"
+          />
+        </div>
+      </div>
+
+      <div class="hero__text-column">
+        <h1 class="hero__title fade-in-up delay-2">
+          {{ 'HERO.GREETING' | translate }} <span class="highlight">Emiliano</span>
+        </h1>
+
+        <h2 class="hero__subtitle fade-in-up delay-3">
+          {{ 'HERO.SUBTITLE' | translate }}
+        </h2>
+
+        <p class="hero__phrase fade-in-up delay-4">"{{ 'HERO.PHRASE' | translate }}"</p>
+
+        <div class="hero__actions fade-in-up delay-5">
+          <button class="btn btn--primary" (click)="scrollToSection('projects')">
+            {{ 'HERO.CTA_PRIMARY' | translate }}
+          </button>
+          <button class="btn btn--secondary" (click)="scrollToSection('contact')">
+            {{ 'HERO.CTA_SECONDARY' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

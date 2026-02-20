@@ -1,7 +1,16 @@
 {
   "NAVBAR": {
     "ABOUT": "About me",
+    "STACK": "Stack",
     "PROJECTS": "Projects",
-    "CONTACT": "Contact"
+    "CONTACT": "Contact",
+    "RESUME": "Download CV"
+  },
+  "HERO": {
+    "GREETING": "Hi, I'm",
+    "SUBTITLE": "FullStack Web Developer.",
+    "PHRASE": "Done is better than perfect.",
+    "CTA_PRIMARY": "View projects",
+    "CTA_SECONDARY": "Contact me"
   }
 }
