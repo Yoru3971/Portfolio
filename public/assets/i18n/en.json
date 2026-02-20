@@ -3,5 +3,12 @@
     "ABOUT": "About me",
     "PROJECTS": "Projects",
     "CONTACT": "Contact"
+  },
+  "HERO": {
+    "GREETING": "Hi, I'm",
+    "SUBTITLE": "FullStack Web Developer.",
+    "PHRASE": "Done is better than perfect.",
+    "CTA_PRIMARY": "View projects",
+    "CTA_SECONDARY": "Contact me"
   }
 }
