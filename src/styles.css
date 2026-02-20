@@ -1,4 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --accent: #3b82f6;
+  --border: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(15, 23, 42, 0.8); /* Dark mode navbar */
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body.light-theme {
+  --bg: #f8fafc; /* Softer, slightly off-white background */
+  --text: #334155;
+  --accent: #4f46e5;
+  --border: rgba(15, 23, 42, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.85); /* Clean white frosted glass */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.section {
+  padding: 10rem 2rem;
+  max-width: 110rem;
+  margin: 0 auto;
+}
