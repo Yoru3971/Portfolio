@@ -107,3 +107,13 @@
 .theme-toggle.active .toggle-slider i {
   transform: rotate(360deg);
 }
+
+/* Keeps the underline at 100% width when the section is active */
+.navbar__links a.active::after {
+  width: 100%;
+}
+
+/* Optional: changes the text color to the accent color when active */
+.navbar__links a.active {
+  color: var(--accent);
+}

@@ -5,22 +5,30 @@
     </div>
 
     <nav class="navbar__links">
-      <a href="#about">Sobre mí</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#contact">Contacto</a>
+      <a href="#about" [class.active]="currentSection === 'about'">Sobre mí</a>
+      <a href="#projects" [class.active]="currentSection === 'projects'">Proyectos</a>
+      <a href="#contact" [class.active]="currentSection === 'contact'">Contacto</a>
     </nav>
 
     <div class="navbar__actions">
-      <button
-        class="theme-toggle"
-        [class.active]="isLight"
-        (click)="toggleTheme()"
-        aria-label="Toggle theme"
-      >
-        <span class="toggle-slider">
-          <i class="fa-solid" [ngClass]="isLight ? 'fa-sun' : 'fa-moon'"></i>
-        </span>
-      </button>
+      @if (isLight$ | async; as isLight) {
+        <button
+          class="theme-toggle"
+          [class.active]="isLight"
+          (click)="toggleTheme()"
+          aria-label="Toggle theme"
+        >
+          <span class="toggle-slider">
+            <i class="fa-solid" [ngClass]="isLight ? 'fa-sun' : 'fa-moon'"></i>
+          </span>
+        </button>
+      } @else {
+        <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
+          <span class="toggle-slider">
+            <i class="fa-solid fa-moon"></i>
+          </span>
+        </button>
+      }
     </div>
   </div>
 </header>
