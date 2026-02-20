@@ -1,0 +1,109 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(1rem);
+  background: var(--nav-bg); /* Relies on the global variable for proper encapsulation */
+  border-bottom: 0.1rem solid var(--border);
+  z-index: 1000;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.navbar__container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo a {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: 0.1rem;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar__links a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navbar__links a:hover::after {
+  width: 100%;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 5.4rem;
+  height: 2.8rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: border-color 0.3s ease;
+}
+
+.toggle-slider {
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--accent);
+  left: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s ease;
+}
+
+.toggle-slider i {
+  font-size: 1.2rem;
+  color: #ffffff; /* Ensures contrast against the blue accent color */
+  transition: transform 0.5s ease;
+}
+
+/* --- Animation States --- */
+
+/* Moves the slider to the right when isLight is true */
+.theme-toggle.active .toggle-slider {
+  transform: translateX(2.6rem);
+}
+
+/* Adds a nice spinning effect to the icon during the transition */
+.theme-toggle.active .toggle-slider i {
+  transform: rotate(360deg);
+}

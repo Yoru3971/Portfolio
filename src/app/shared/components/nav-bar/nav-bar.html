@@ -1,0 +1,26 @@
+<header class="navbar">
+  <div class="navbar__container">
+    <div class="navbar__logo">
+      <a href="#hero">Emiliano Daverio</a>
+    </div>
+
+    <nav class="navbar__links">
+      <a href="#about">Sobre mí</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button
+        class="theme-toggle"
+        [class.active]="isLight"
+        (click)="toggleTheme()"
+        aria-label="Toggle theme"
+      >
+        <span class="toggle-slider">
+          <i class="fa-solid" [ngClass]="isLight ? 'fa-sun' : 'fa-moon'"></i>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
