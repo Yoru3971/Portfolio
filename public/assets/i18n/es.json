@@ -42,5 +42,12 @@
       { "name": "Proactividad", "icon": "fa-solid fa-bolt" },
       { "name": "Trabajo en Equipo", "icon": "fa-solid fa-users" }
     ]
+  },
+  "PROJECTS": {
+    "TITLE": "Proyectos",
+    "VIEW_CODE": "Ver Código",
+    "VIEW_LIVE": "Ver Demo",
+    "EMPTY_MESSAGE": "Actualmente estoy documentando mis repositorios. ¡Próximamente publicaré mis proyectos aquí! Trabajo en progreso 🚧",
+    "ITEMS": []
   }
 }

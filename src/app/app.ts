@@ -4,10 +4,11 @@ import { HeroComponent } from './shared/components/hero-component/hero-component
 import { LanguageService } from './core/services/language-service';
 import { AboutMeComponent } from './shared/components/about-me-component/about-me-component';
 import { SkillsComponent } from './shared/components/skills-component/skills-component';
+import { ProjectsComponent } from './shared/components/projects-component/projects-component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavBar, HeroComponent, AboutMeComponent, SkillsComponent],
+  imports: [NavBar, HeroComponent, AboutMeComponent, SkillsComponent, ProjectsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -42,5 +42,12 @@
       { "name": "Proactivity", "icon": "fa-solid fa-bolt" },
       { "name": "Teamwork", "icon": "fa-solid fa-users" }
     ]
+  },
+  "PROJECTS": {
+    "TITLE": "Projects",
+    "VIEW_CODE": "Source Code",
+    "VIEW_LIVE": "Live Demo",
+    "EMPTY_MESSAGE": "I am currently documenting my repositories. My projects will be available here soon! Work in progress 🚧",
+    "ITEMS": []
   }
 }

@@ -1,0 +1,54 @@
+<section id="projects" class="projects section">
+  <div class="projects__container">
+    <div class="projects__header fade-in-up delay-1">
+      <h2 class="section-title">{{ 'PROJECTS.TITLE' | translate }}<span class="dot">.</span></h2>
+      <div class="title-line"></div>
+    </div>
+
+    @if (('PROJECTS.ITEMS' | translate)?.length > 0) {
+      <div class="projects__grid">
+        @for (project of 'PROJECTS.ITEMS' | translate; track project.title; let i = $index) {
+          <article class="card fade-in-up" [style.animation-delay]="i * 0.2 + 0.2 + 's'">
+            <div class="card__image-container">
+              <img [src]="project.image" [alt]="project.title" class="card__image" loading="lazy" />
+              <div class="card__overlay">
+                <a
+                  [href]="project.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-icon"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                @if (project.demo !== '') {
+                  <a
+                    [href]="project.demo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-icon"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                }
+              </div>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">{{ project.title }}</h3>
+              <p class="card__description">{{ project.description }}</p>
+              <div class="chips-container card__tech">
+                @for (tech of project.tech; track tech) {
+                  <span class="chip tech-chip">{{ tech }}</span>
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="projects__empty fade-in-up delay-2">
+        <i class="fa-solid fa-code"></i>
+        <p>{{ 'PROJECTS.EMPTY_MESSAGE' | translate }}</p>
+      </div>
+    }
+  </div>
+</section>

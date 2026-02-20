@@ -37,10 +37,21 @@ export class NavBar {
 
   @HostListener('window:scroll')
   onScroll(): void {
+    // Closes the mobile menu automatically if the user starts scrolling
     this.closeMenu();
-    const sections = ['about', 'skills', 'projects', 'contact'];
+
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    const offset = 150;
+
+    // If we are at the very top (Hero section), clear the active section
+    if (scrollPosition < 200) {
+      this.currentSection = '';
+      return;
+    }
+
+    // Array of sections to track
+    const sections = ['about', 'skills', 'projects', 'contact'];
+    // Increased offset to sync perfectly with the CSS scroll-margin-top
+    const offset = 200;
 
     for (const section of sections) {
       const element = document.getElementById(section);
