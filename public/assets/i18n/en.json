@@ -1,8 +1,10 @@
 {
   "NAVBAR": {
     "ABOUT": "About me",
+    "STACK": "Stack",
     "PROJECTS": "Projects",
-    "CONTACT": "Contact"
+    "CONTACT": "Contact",
+    "RESUME": "Download CV"
   },
   "HERO": {
     "GREETING": "Hi, I'm",

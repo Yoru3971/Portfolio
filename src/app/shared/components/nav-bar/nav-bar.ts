@@ -12,6 +12,7 @@ import { LanguageService } from '../../../core/services/language-service';
 })
 export class NavBar {
   currentSection: string = '';
+  isMenuOpen: boolean = false;
 
   constructor(
     public themeService: ThemeService,
@@ -26,9 +27,18 @@ export class NavBar {
     this.languageService.toggleLanguage();
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
   @HostListener('window:scroll')
   onScroll(): void {
-    const sections = ['about', 'projects', 'contact'];
+    this.closeMenu();
+    const sections = ['about', 'stack', 'projects', 'contact'];
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     const offset = 150;
 
