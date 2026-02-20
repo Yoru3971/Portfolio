@@ -1,8 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
 import { ThemeService } from '../../../core/services/theme-service';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../../core/services/language-service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,34 +10,22 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css',
 })
-export class NavBar implements OnInit {
-  isLight$!: Observable<boolean>;
+export class NavBar {
   currentSection: string = '';
-  isEnglish: boolean = false;
 
   constructor(
-    private themeService: ThemeService,
-    public translate: TranslateService,
-  ) {
-    this.translate.addLangs(['es', 'en']);
-    this.translate.setDefaultLang('es');
-    this.translate.use('es');
-    this.isEnglish = this.translate.currentLang === 'en';
-  }
-
-  ngOnInit(): void {
-    this.isLight$ = this.themeService.isLightMode$;
-  }
+    public themeService: ThemeService,
+    public languageService: LanguageService,
+  ) {}
 
   toggleTheme(): void {
     this.themeService.toggleTheme();
   }
 
   toggleLanguage(): void {
-    const newLang = this.translate.currentLang === 'en' ? 'es' : 'en';
-    this.translate.use(newLang);
-    this.isEnglish = newLang === 'en';
+    this.languageService.toggleLanguage();
   }
+
   @HostListener('window:scroll')
   onScroll(): void {
     const sections = ['about', 'projects', 'contact'];
@@ -49,6 +37,7 @@ export class NavBar implements OnInit {
       if (element) {
         const top = element.offsetTop - offset;
         const bottom = top + element.offsetHeight;
+
         if (scrollPosition >= top && scrollPosition < bottom) {
           this.currentSection = section;
         }

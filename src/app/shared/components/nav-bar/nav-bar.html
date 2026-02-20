@@ -20,24 +20,21 @@
       <!-- Language toggle -->
       <button
         class="theme-toggle"
-        [class.active]="isEnglish"
+        [class.active]="languageService.isEnglish()"
         (click)="toggleLanguage()"
-        aria-label="Toggle language"
       >
         <span class="toggle-slider">
-          <span class="flag-icon fi" [ngClass]="isEnglish ? 'fi-gb' : 'fi-ar'"></span>
+          <span
+            class="flag-icon fi"
+            [ngClass]="languageService.isEnglish() ? 'fi-gb' : 'fi-ar'"
+          ></span>
         </span>
       </button>
 
-      <!-- Theme toggle (single button, no @if) -->
-      <button
-        class="theme-toggle"
-        [class.active]="isLight$ | async"
-        (click)="toggleTheme()"
-        aria-label="Toggle theme"
-      >
+      <!-- Theme toggle -->
+      <button class="theme-toggle" [class.active]="themeService.isLight()" (click)="toggleTheme()">
         <span class="toggle-slider">
-          <i class="fa-solid" [ngClass]="(isLight$ | async) ? 'fa-sun' : 'fa-moon'"></i>
+          <i class="fa-solid" [ngClass]="themeService.isLight() ? 'fa-sun' : 'fa-moon'"></i>
         </span>
       </button>
     </div>
