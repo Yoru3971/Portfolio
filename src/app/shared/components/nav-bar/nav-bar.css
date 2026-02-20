@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   backdrop-filter: blur(1rem);
-  background: var(--nav-bg); /* Relies on the global variable for proper encapsulation */
+  background: var(--nav-bg);
   border-bottom: 0.1rem solid var(--border);
   z-index: 1000;
   transition:
@@ -52,15 +52,20 @@
   transition: width 0.3s ease;
 }
 
-.navbar__links a:hover::after {
+.navbar__links a:hover::after,
+.navbar__links a.active::after {
   width: 100%;
+}
+
+.navbar__links a.active {
+  color: var(--accent);
 }
 
 .navbar__actions {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
-
 .theme-toggle {
   position: relative;
   width: 5.4rem;
@@ -72,48 +77,45 @@
   display: flex;
   align-items: center;
   padding: 0;
-  transition: border-color 0.3s ease;
 }
 
 .toggle-slider {
   position: absolute;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
-  background: var(--accent);
   left: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.3s ease;
+  background-color: var(--accent);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  color: white; /* icons will inherit this */
 }
 
 .toggle-slider i {
-  font-size: 1.2rem;
-  color: #ffffff; /* Ensures contrast against the blue accent color */
-  transition: transform 0.5s ease;
+  font-size: 1.4rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Animation States --- */
+/* Flag fills entire circle */
+.flag-icon.fi {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-/* Moves the slider to the right when isLight is true */
+/* Slide animation */
 .theme-toggle.active .toggle-slider {
   transform: translateX(2.6rem);
 }
 
-/* Adds a nice spinning effect to the icon during the transition */
-.theme-toggle.active .toggle-slider i {
+/* Rotation animation */
+.theme-toggle.active .toggle-slider i,
+.theme-toggle.active .toggle-slider .flag-icon {
   transform: rotate(360deg);
-}
-
-/* Keeps the underline at 100% width when the section is active */
-.navbar__links a.active::after {
-  width: 100%;
-}
-
-/* Optional: changes the text color to the accent color when active */
-.navbar__links a.active {
-  color: var(--accent);
 }
