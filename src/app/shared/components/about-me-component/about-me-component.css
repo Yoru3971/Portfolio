@@ -1,0 +1,100 @@
+.about {
+  position: relative;
+  padding: 12rem 2rem 10rem 2rem; 
+  min-height: 90vh; 
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+}
+.about__container {
+  max-width: 90rem; /* Slightly narrower for optimal reading line length */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- Section Header --- */
+.about__header {
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.section-title .dot {
+  color: var(--accent);
+}
+
+.title-line {
+  height: 0.1rem;
+  width: 100%;
+  background-color: var(--border);
+  position: relative;
+}
+
+.title-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5rem;
+  background-color: var(--accent);
+}
+
+/* --- Typography --- */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-left: 0.3rem solid var(--accent);
+  padding-left: 3rem;
+}
+
+.about__paragraph {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: var(--text);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* --- Animations --- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+/* --- Mobile Responsive Design --- */
+@media (max-width: 768px) {
+  .about__content {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .about__paragraph {
+    font-size: 1.6rem;
+  }
+}

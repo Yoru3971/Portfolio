@@ -3,15 +3,18 @@
 
   <div class="navbar__container">
     <div class="navbar__logo">
-      <a href="#hero">Emiliano Daverio</a>
+      <a href="#hero" class="logo-link">
+        <img src="/favicon.svg" alt="ED Logo" class="logo-img" />
+        Emiliano Daverio
+      </a>
     </div>
 
     <nav class="navbar__links" [class.open]="isMenuOpen">
       <a href="#about" [class.active]="currentSection === 'about'" (click)="closeMenu()">
         {{ 'NAVBAR.ABOUT' | translate }}
       </a>
-      <a href="#stack" [class.active]="currentSection === 'stack'" (click)="closeMenu()">
-        {{ 'NAVBAR.STACK' | translate }}
+      <a href="#skills" [class.active]="currentSection === 'skills'" (click)="closeMenu()">
+        {{ 'NAVBAR.SKILLS' | translate }}
       </a>
       <a href="#projects" [class.active]="currentSection === 'projects'" (click)="closeMenu()">
         {{ 'NAVBAR.PROJECTS' | translate }}
@@ -20,7 +23,7 @@
         {{ 'NAVBAR.CONTACT' | translate }}
       </a>
 
-      <a href="assets/docs/cv.pdf" target="_blank" class="btn-cv" (click)="closeMenu()">
+      <a class="btn-cv" (click)="downloadCV(); closeMenu()">
         {{ 'NAVBAR.RESUME' | translate }}
       </a>
     </nav>

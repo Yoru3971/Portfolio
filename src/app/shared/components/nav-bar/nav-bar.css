@@ -20,13 +20,23 @@
   justify-content: space-between;
 }
 
-.navbar__logo a {
+/* --- Logo Section --- */
+.navbar__logo .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--text);
   letter-spacing: 0.1rem;
   z-index: 1001;
+}
+
+.logo-img {
+  height: 3.2rem; /* Adjust height to match the text size */
+  width: auto;
+  display: block;
 }
 
 /* --- Standard Links --- */

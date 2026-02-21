@@ -1,7 +1,7 @@
 {
   "NAVBAR": {
     "ABOUT": "Sobre mí",
-    "STACK": "Stack",
+    "SKILLS": "Habilidades",
     "PROJECTS": "Proyectos",
     "CONTACT": "Contacto",
     "RESUME": "Descargar CV"
@@ -12,5 +12,56 @@
     "PHRASE": "Hecho es mejor que perfecto.",
     "CTA_PRIMARY": "Ver proyectos",
     "CTA_SECONDARY": "Contactarme"
+  },
+  "ABOUT": {
+    "TITLE": "Sobre mí",
+    "BIO_P1": "Mi camino comenzó estudiando Física, impulsado por la curiosidad de entender cómo funcionan las cosas. En paralelo, me formé de manera autodidacta en programación, un interés que rápidamente se convirtió en pasión y me llevó a orientar mi desarrollo profesional completamente hacia el software. Me gradué como Técnico en Programación en la UTN, afianzando una base sólida en prácticas modernas de desarrollo.",
+    "BIO_P2": "Tengo experiencia en la creación de APIs RESTful con Spring Boot, desarrollo frontend con Angular, aplicación de patrones de diseño, arquitectura limpia y metodologías ágiles en equipos multidisciplinarios. Disfruto enfrentar problemas complejos y transformarlos en soluciones escalables y mantenibles.",
+    "BIO_P3": "Mi curiosidad y proactividad me impulsan a sumergirme constantemente en la investigación y desarrollo (R&D) de áreas que no conozco. Esto me ha llevado a liderar proyectos desafiantes, desde el modding y la ingeniería inversa de videojuegos, hasta la implementación de modelos RAG integrando Inteligencia Artificial."
+  },
+  "SKILLS": {
+    "TITLE": "Habilidades",
+    "TECH_TITLE": "Hard Skills",
+    "SOFT_TITLE": "Soft Skills",
+    "HARD": [
+      { "name": "Java", "icon": "fa-brands fa-java" },
+      { "name": "Spring Boot", "icon": "fa-solid fa-leaf" },
+      { "name": "JPA / Hibernate", "icon": "fa-solid fa-database" },
+      { "name": "Angular", "icon": "fa-brands fa-angular" },
+      { "name": "MySQL", "icon": "fa-solid fa-server" },
+      { "name": "Postman", "icon": "fa-solid fa-rocket" },
+      { "name": "Jira / Trello", "icon": "fa-brands fa-trello" },
+      { "name": "Git", "icon": "fa-brands fa-git" },
+      { "name": "GitHub", "icon": "fa-brands fa-github" },
+      { "name": "Inglés B2", "icon": "fa-solid fa-language" }
+    ],
+    "SOFT": [
+      { "name": "Resolución de Problemas", "icon": "fa-solid fa-puzzle-piece" },
+      { "name": "Metodologías Ágiles", "icon": "fa-solid fa-arrows-spin" },
+      { "name": "Aprendizaje Continuo", "icon": "fa-solid fa-book-open" },
+      { "name": "Proactividad", "icon": "fa-solid fa-bolt" },
+      { "name": "Trabajo en Equipo", "icon": "fa-solid fa-users" }
+    ]
+  },
+  "PROJECTS": {
+    "TITLE": "Proyectos",
+    "VIEW_CODE": "Ver Código",
+    "VIEW_LIVE": "Ver Demo",
+    "EMPTY_MESSAGE": "Actualmente estoy documentando mis repositorios. ¡Próximamente publicaré mis proyectos aquí! Trabajo en progreso 🚧",
+    "ITEMS": []
+  },
+  "CONTACT": {
+    "TITLE": "Contacto",
+    "SUBTITLE": "¿Tenés una idea en mente o necesitás un desarrollador para tu equipo? ¡Hablemos!",
+    "NAME_LABEL": "Nombre",
+    "EMAIL_LABEL": "Email",
+    "MESSAGE_LABEL": "Mensaje",
+    "SEND_BUTTON": "Enviar Mensaje",
+    "SUCCESS_MESSAGE": "¡Gracias por contactarte! Te responderé a la brevedad."
+  },
+  "FOOTER": {
+    "RIGHTS": "Todos los derechos reservados.",
+    "BUILT_WITH": "Desarrollado con",
+    "BY": "por Emiliano Daverio"
   }
 }

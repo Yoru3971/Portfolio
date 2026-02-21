@@ -1,0 +1,54 @@
+.footer {
+  background-color: var(--nav-bg);
+  border-top: 0.1rem solid var(--border);
+  padding: 3rem 2rem;
+  /* Ensures the footer always sits at the very bottom of the page */
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 110rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* --- Typography --- */
+.footer__copyright {
+  font-size: 1.4rem;
+  color: var(--text);
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer__made-with {
+  font-size: 1.4rem;
+  color: var(--text);
+  opacity: 0.6;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer__made-with i {
+  color: #dd0031;
+  font-size: 1.8rem;
+}
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
