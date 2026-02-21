@@ -19,6 +19,25 @@ export class NavBar {
     public languageService: LanguageService,
   ) {}
 
+  // Getter for dynamic CV URL based on current language
+  get cvUrl(): string {
+    return this.languageService.isEnglish()
+      ? 'assets/docs/CV_EmilianoDaverio_EN_2026.pdf'
+      : 'assets/docs/CV_EmilianoDaverio_ES_2026.pdf';
+  }
+
+  downloadCV(): void {
+    const link = document.createElement('a');
+    link.href = this.cvUrl;
+    link.download = this.languageService.isEnglish()
+      ? 'Emiliano_Daverio_CV_EN_2026.pdf'
+      : 'Emiliano_Daverio_CV_ES_2026.pdf';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   toggleTheme(): void {
     this.themeService.toggleTheme();
   }
@@ -37,20 +56,15 @@ export class NavBar {
 
   @HostListener('window:scroll')
   onScroll(): void {
-    // Closes the mobile menu automatically if the user starts scrolling
     this.closeMenu();
-
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-    // If we are at the very top (Hero section), clear the active section
     if (scrollPosition < 200) {
       this.currentSection = '';
       return;
     }
 
-    // Array of sections to track
     const sections = ['about', 'skills', 'projects', 'contact'];
-    // Increased offset to sync perfectly with the CSS scroll-margin-top
     const offset = 200;
 
     for (const section of sections) {
