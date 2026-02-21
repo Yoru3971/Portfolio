@@ -1,0 +1,248 @@
+.contact {
+  position: relative;
+  padding: 10rem 2rem 15rem 2rem;
+  background-color: var(--bg);
+  min-height: 90vh;
+}
+
+.contact__container {
+  max-width: 110rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- Section Header --- */
+.contact__header {
+  margin-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.section-title .dot {
+  color: var(--accent);
+}
+
+.title-line {
+  height: 0.1rem;
+  width: 100%;
+  background-color: var(--border);
+  position: relative;
+}
+
+.title-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5rem;
+  background-color: var(--accent);
+}
+
+/* --- Content Layout --- */
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+/* --- Left Column: Info & Socials --- */
+.contact__subtitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  border: 0.1rem solid var(--border);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  width: max-content;
+  min-width: 20rem;
+}
+
+.social-btn i {
+  font-size: 2rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: var(--accent);
+  background-color: rgba(37, 99, 235, 0.05);
+  transform: translateX(1rem);
+}
+
+.social-btn:hover i {
+  transform: scale(1.2);
+}
+
+/* --- Right Column: Form --- */
+.contact__form-wrapper {
+  background-color: var(--nav-bg);
+  padding: 4rem;
+  border-radius: 1.6rem;
+  border: 0.1rem solid var(--border);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 0.1rem solid var(--border);
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.3rem rgba(37, 99, 235, 0.1);
+}
+
+.form-input.invalid {
+  border-color: #ef4444;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 12rem;
+}
+
+.btn-submit {
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem rgba(37, 99, 235, 0.3);
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Success Message --- */
+.success-message {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 0.1rem solid #22c55e;
+  border-radius: 0.8rem;
+  color: #22c55e;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* --- Animations --- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.3s;
+}
+.delay-3 {
+  animation-delay: 0.5s;
+}
+
+/* --- Mobile Responsive Design --- */
+@media (max-width: 992px) {
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  .contact__form-wrapper {
+    padding: 3rem 2rem;
+  }
+}

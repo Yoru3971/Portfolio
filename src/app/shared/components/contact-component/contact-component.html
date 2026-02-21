@@ -1,0 +1,98 @@
+<section id="contact" class="contact section">
+  <div class="contact__container">
+    <div class="contact__header fade-in-up delay-1">
+      <h2 class="section-title">{{ 'CONTACT.TITLE' | translate }}<span class="dot">.</span></h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="contact__content">
+      <div class="contact__info fade-in-up delay-2">
+        <h3 class="contact__subtitle">{{ 'CONTACT.SUBTITLE' | translate }}</h3>
+
+        <div class="contact__socials">
+          <a
+            [href]="socialLinks.linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a
+            [href]="socialLinks.github"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn"
+          >
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a
+            [href]="socialLinks.gmail"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn"
+          >
+            <i class="fa-regular fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__form-wrapper fade-in-up delay-3">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
+          <div class="form-group">
+            <label for="name" class="form-label">{{ 'CONTACT.NAME_LABEL' | translate }}</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              class="form-input"
+              [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">{{ 'CONTACT.EMAIL_LABEL' | translate }}</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="form-input"
+              [class.invalid]="
+                contactForm.get('email')?.invalid && contactForm.get('email')?.touched
+              "
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">{{
+              'CONTACT.MESSAGE_LABEL' | translate
+            }}</label>
+            <textarea
+              id="message"
+              formControlName="message"
+              rows="5"
+              class="form-input form-textarea"
+              [class.invalid]="
+                contactForm.get('message')?.invalid && contactForm.get('message')?.touched
+              "
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit" [disabled]="contactForm.invalid || isLoading">
+            @if (isLoading) {
+              Enviando... <i class="fa-solid fa-spinner fa-spin"></i>
+            } @else {
+              {{ 'CONTACT.SEND_BUTTON' | translate }} <i class="fa-solid fa-paper-plane"></i>
+            }
+          </button>
+
+          @if (isSubmitted) {
+            <div class="success-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'CONTACT.SUCCESS_MESSAGE' | translate }}
+            </div>
+          }
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

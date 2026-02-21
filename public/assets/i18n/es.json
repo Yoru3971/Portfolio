@@ -49,5 +49,14 @@
     "VIEW_LIVE": "Ver Demo",
     "EMPTY_MESSAGE": "Actualmente estoy documentando mis repositorios. ¡Próximamente publicaré mis proyectos aquí! Trabajo en progreso 🚧",
     "ITEMS": []
+  },
+  "CONTACT": {
+    "TITLE": "Contacto",
+    "SUBTITLE": "¿Tenés una idea en mente o necesitás un desarrollador para tu equipo? ¡Hablemos!",
+    "NAME_LABEL": "Nombre",
+    "EMAIL_LABEL": "Email",
+    "MESSAGE_LABEL": "Mensaje",
+    "SEND_BUTTON": "Enviar Mensaje",
+    "SUCCESS_MESSAGE": "¡Gracias por contactarte! Te responderé a la brevedad."
   }
 }
