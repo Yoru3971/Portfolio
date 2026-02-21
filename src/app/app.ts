@@ -6,11 +6,12 @@ import { AboutMeComponent } from './shared/components/about-me-component/about-m
 import { SkillsComponent } from './shared/components/skills-component/skills-component';
 import { ProjectsComponent } from './shared/components/projects-component/projects-component';
 import { ContactComponent } from './shared/components/contact-component/contact-component';
+import { FooterComponent } from './shared/components/footer-component/footer-component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [NavBar, HeroComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ContactComponent],
+  imports: [NavBar, HeroComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ContactComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
