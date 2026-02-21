@@ -15,9 +15,9 @@
   },
   "ABOUT": {
     "TITLE": "About me",
-    "BIO_P1": "My journey began studying Physics, driven by a curiosity to understand how things work. In parallel, I taught myself programming, an interest that quickly turned into a passion and led me to fully transition my career towards software engineering. I graduated with a Technical Degree in Programming from UTN, establishing a solid foundation in modern development practices.",
-    "BIO_P2": "I have experience building RESTful APIs with Spring Boot, frontend development with Angular, applying design patterns, clean architecture, and agile methodologies within multidisciplinary teams. I enjoy tackling complex problems and transforming them into scalable and maintainable solutions.",
-    "BIO_P3": "My curiosity and proactivity constantly push me to dive deep into Research and Development (R&D) in unknown areas. This has led me to tackle challenging projects, ranging from video game modding and reverse engineering to the implementation of RAG models integrating Artificial Intelligence."
+    "BIO_P1": "My journey began studying <span class=\"highlight\">Physics</span>, driven by a curiosity to understand how things work. In parallel, I taught myself <span class=\"highlight\">programming</span>, an interest that quickly turned into a passion and led me to fully transition my career towards software engineering. I graduated with a <span class=\"highlight\">Technical Degree in Programming</span> from <span class=\"highlight\">UTN</span> (Universidad Tecnológica Nacional), establishing a solid foundation in modern development practices.",
+    "BIO_P2": "I have experience building RESTful APIs with <span class=\"highlight\">Spring Boot</span>, frontend development with <span class=\"highlight\">Angular</span>, applying design patterns, clean architecture, and agile methodologies within multidisciplinary teams. I enjoy tackling complex problems and transforming them into <span class=\"highlight\">scalable and maintainable solutions</span>.",
+    "BIO_P3": "My curiosity and proactivity constantly push me to dive deep into <span class=\"highlight\">Research and Development (R&D)</span> in unknown areas. This has led me to tackle challenging projects, ranging from video game modding and reverse engineering to the implementation of <span class=\"highlight\">RAG models</span> integrating Artificial Intelligence."
   },
   "SKILLS": {
     "TITLE": "Skills",

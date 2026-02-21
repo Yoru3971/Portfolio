@@ -15,14 +15,14 @@
   },
   "ABOUT": {
     "TITLE": "Sobre mí",
-    "BIO_P1": "Mi camino comenzó estudiando Física, impulsado por la curiosidad de entender cómo funcionan las cosas. En paralelo, me formé de manera autodidacta en programación, un interés que rápidamente se convirtió en pasión y me llevó a orientar mi desarrollo profesional completamente hacia el software. Me gradué como Técnico en Programación en la UTN, afianzando una base sólida en prácticas modernas de desarrollo.",
-    "BIO_P2": "Tengo experiencia en la creación de APIs RESTful con Spring Boot, desarrollo frontend con Angular, aplicación de patrones de diseño, arquitectura limpia y metodologías ágiles en equipos multidisciplinarios. Disfruto enfrentar problemas complejos y transformarlos en soluciones escalables y mantenibles.",
-    "BIO_P3": "Mi curiosidad y proactividad me impulsan a sumergirme constantemente en la investigación y desarrollo (R&D) de áreas que no conozco. Esto me ha llevado a liderar proyectos desafiantes, desde el modding y la ingeniería inversa de videojuegos, hasta la implementación de modelos RAG integrando Inteligencia Artificial."
+    "BIO_P1": "Mi camino comenzó estudiando <span class=\"highlight\">Física</span>, impulsado por la curiosidad de entender cómo funcionan las cosas. En paralelo, me formé de manera autodidacta en <span class=\"highlight\">programación</span>, un interés que rápidamente se convirtió en pasión y me llevó a orientar mi desarrollo profesional completamente hacia el software. Me gradué como <span class=\"highlight\">Técnico en Programación</span> en la <span class=\"highlight\">UTN</span> (Universidad Tecnológica Nacional), afianzando una base sólida en prácticas modernas de desarrollo.",
+    "BIO_P2": "Tengo experiencia en la creación de APIs RESTful con <span class=\"highlight\">Spring Boot</span>, desarrollo frontend con <span class=\"highlight\">Angular</span>, aplicación de patrones de diseño, arquitectura limpia y metodologías ágiles en equipos multidisciplinarios. Disfruto enfrentar problemas complejos y transformarlos en <span class=\"highlight\">soluciones escalables y mantenibles</span>.",
+    "BIO_P3": "Mi curiosidad y proactividad me impulsan a sumergirme constantemente en la <span class=\"highlight\">investigación y desarrollo (R&D)</span> de áreas que no conozco. Esto me ha llevado a liderar proyectos desafiantes, desde el modding y la ingeniería inversa de videojuegos, hasta la implementación de <span class=\"highlight\">modelos RAG</span> integrando Inteligencia Artificial."
   },
   "SKILLS": {
     "TITLE": "Habilidades",
-    "TECH_TITLE": "Hard Skills",
-    "SOFT_TITLE": "Soft Skills",
+    "TECH_TITLE": "Tecnologías",
+    "SOFT_TITLE": "Habilidades Blandas",
     "HARD": [
       { "name": "Java", "icon": "fa-brands fa-java" },
       { "name": "Spring Boot", "icon": "fa-solid fa-leaf" },

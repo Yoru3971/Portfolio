@@ -6,15 +6,9 @@
     </div>
 
     <div class="about__content fade-in-up delay-2">
-      <p class="about__paragraph">
-        {{ 'ABOUT.BIO_P1' | translate }}
-      </p>
-      <p class="about__paragraph">
-        {{ 'ABOUT.BIO_P2' | translate }}
-      </p>
-      <p class="about__paragraph">
-        {{ 'ABOUT.BIO_P3' | translate }}
-      </p>
+      <p class="about__paragraph" [innerHTML]="'ABOUT.BIO_P1' | translate"></p>
+      <p class="about__paragraph" [innerHTML]="'ABOUT.BIO_P2' | translate"></p>
+      <p class="about__paragraph" [innerHTML]="'ABOUT.BIO_P3' | translate"></p>
     </div>
   </div>
 </section>
