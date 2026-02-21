@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1089)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(1.6,0,0,1.6,100,100)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"><svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M100 75C86.1929 75 75 86.1929 75 100V400C75 413.807 86.1929 425 100 425H275C357.843 425 425 357.843 425 275V225C425 142.157 357.843 75 275 75H100ZM125 125H275C330.228 125 375 169.772 375 225V275C375 330.228 330.228 375 275 375H125V300H250C256.904 300 262.5 294.404 262.5 287.5C262.5 280.596 256.904 275 250 275H125V225H250C256.904 225 262.5 219.404 262.5 212.5C262.5 205.596 256.904 200 250 200H125V125Z" fill="#2563EB"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1089"><rect width="1000" height="1000" x="0" y="0" rx="500" ry="500"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1090)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(1.6,0,0,1.6,100,100)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"><svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M100 75C86.1929 75 75 86.1929 75 100V400C75 413.807 86.1929 425 100 425H275C357.843 425 425 357.843 425 275V225C425 142.157 357.843 75 275 75H100ZM125 125H275C330.228 125 375 169.772 375 225V275C375 330.228 330.228 375 275 375H125V300H250C256.904 300 262.5 294.404 262.5 287.5C262.5 280.596 256.904 275 250 275H125V225H250C256.904 225 262.5 219.404 262.5 212.5C262.5 205.596 256.904 200 250 200H125V125Z" fill="#2563EB"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1090"><rect width="1000" height="1000" x="0" y="0" rx="500" ry="500"></rect></clipPath></defs></svg></g></svg>
