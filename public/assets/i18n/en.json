@@ -58,5 +58,10 @@
     "MESSAGE_LABEL": "Message",
     "SEND_BUTTON": "Send Message",
     "SUCCESS_MESSAGE": "Thanks for reaching out! I'll get back to you shortly."
+  },
+  "FOOTER": {
+    "RIGHTS": "All rights reserved.",
+    "BUILT_WITH": "Built with",
+    "BY": "by Emiliano Daverio"
   }
 }

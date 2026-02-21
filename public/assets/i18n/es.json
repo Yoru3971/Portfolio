@@ -58,5 +58,10 @@
     "MESSAGE_LABEL": "Mensaje",
     "SEND_BUTTON": "Enviar Mensaje",
     "SUCCESS_MESSAGE": "¡Gracias por contactarte! Te responderé a la brevedad."
+  },
+  "FOOTER": {
+    "RIGHTS": "Todos los derechos reservados.",
+    "BUILT_WITH": "Desarrollado con",
+    "BY": "por Emiliano Daverio"
   }
 }
