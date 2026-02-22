@@ -15,7 +15,7 @@
   },
   "ABOUT": {
     "TITLE": "Sobre mí",
-    "BIO_P1": "Mi camino comenzó estudiando <span class=\"highlight\">Física</span>, impulsado por la curiosidad de entender cómo funcionan las cosas. En paralelo, me formé de manera autodidacta en <span class=\"highlight\">programación</span>, un interés que rápidamente se convirtió en pasión y me llevó a orientar mi desarrollo profesional completamente hacia el software. Me gradué como <span class=\"highlight\">Técnico en Programación</span> en la <span class=\"highlight\">UTN</span> (Universidad Tecnológica Nacional), afianzando una base sólida en prácticas modernas de desarrollo.",
+    "BIO_P1": "Mi camino comenzó estudiando <span class=\"highlight\">Física</span>, impulsado por la curiosidad de entender cómo funcionan las cosas. En paralelo, me formé de manera autodidacta en <span class=\"highlight\">programación</span>, un interés que rápidamente se convirtió en pasión y me llevó a orientar mi desarrollo profesional completamente hacia el software. Me gradué como <span class=\"highlight\">Técnico en Programación</span> en la <span class=\"highlight\">Universidad Tecnológica Nacional</span> (UTN), afianzando una base sólida en prácticas modernas de desarrollo.",
     "BIO_P2": "Tengo experiencia en la creación de APIs RESTful con <span class=\"highlight\">Spring Boot</span>, desarrollo frontend con <span class=\"highlight\">Angular</span>, aplicación de patrones de diseño, arquitectura limpia y metodologías ágiles en equipos multidisciplinarios. Disfruto enfrentar problemas complejos y transformarlos en <span class=\"highlight\">soluciones escalables y mantenibles</span>.",
     "BIO_P3": "Mi curiosidad y proactividad me impulsan a sumergirme constantemente en la <span class=\"highlight\">investigación y desarrollo (R&D)</span> de áreas que no conozco. Esto me ha llevado a liderar proyectos desafiantes, desde el modding y la ingeniería inversa de videojuegos, hasta la implementación de <span class=\"highlight\">modelos RAG</span> integrando Inteligencia Artificial."
   },
@@ -30,6 +30,9 @@
       { "name": "Angular", "icon": "fa-brands fa-angular" },
       { "name": "MySQL", "icon": "fa-solid fa-server" },
       { "name": "Postman", "icon": "fa-solid fa-rocket" },
+      { "name": "Docker", "icon": "fa-brands fa-docker" },
+      { "name": "Render", "icon": "fa-solid fa-cloud" },
+      { "name": "Vercel", "icon": "fa-solid fa-caret-up" },
       { "name": "Jira / Trello", "icon": "fa-brands fa-trello" },
       { "name": "Git", "icon": "fa-brands fa-git" },
       { "name": "GitHub", "icon": "fa-brands fa-github" },
@@ -48,7 +51,17 @@
     "VIEW_CODE": "Ver Código",
     "VIEW_LIVE": "Ver Demo",
     "EMPTY_MESSAGE": "Actualmente estoy documentando mis repositorios. ¡Próximamente publicaré mis proyectos aquí! Trabajo en progreso 🚧",
-    "ITEMS": []
+    "ITEMS": [
+      {
+        "title": "MiViandita",
+        "description": "Plataforma integral para gestion de pedidos de viandas, conectando emprendedores y clientes. Desarrollada como una SPA moderna en Angular (Zoneless + Signals) conectada a una API REST en Spring Boot. Incluye autenticación JWT, control de roles (Admin, Dueño, Cliente), notificaciones automatizadas (Brevo) y gestión de imágenes (Cloudinary). Despliegue cloud completo en Vercel, Render y Aiven.",
+        "image": "assets/images/miviandita.png",
+        "tech": ["Angular 17", "Spring Boot", "MySQL","Docker" ,"Render", "Vercel"],
+        "githubFront": "https://github.com/Yoru3971/TP-Final-Progra-IV",
+        "githubBack": "https://github.com/Yoru3971/TP-Final-Progra-III",
+        "demo": "https://miviandita.vercel.app"
+      }
+    ]
   },
   "CONTACT": {
     "TITLE": "Contacto",

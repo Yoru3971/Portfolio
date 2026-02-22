@@ -15,7 +15,7 @@
   },
   "ABOUT": {
     "TITLE": "About me",
-    "BIO_P1": "My journey began studying <span class=\"highlight\">Physics</span>, driven by a curiosity to understand how things work. In parallel, I taught myself <span class=\"highlight\">programming</span>, an interest that quickly turned into a passion and led me to fully transition my career towards software engineering. I graduated with a <span class=\"highlight\">Technical Degree in Programming</span> from <span class=\"highlight\">UTN</span> (Universidad Tecnológica Nacional), establishing a solid foundation in modern development practices.",
+    "BIO_P1": "My journey began studying <span class=\"highlight\">Physics</span>, driven by a curiosity to understand how things work. In parallel, I taught myself <span class=\"highlight\">programming</span>, an interest that quickly turned into a passion and led me to fully transition my career towards software engineering. I graduated with a <span class=\"highlight\">Technical Degree in Programming</span> from <span class=\"highlight\">Universidad Tecnológica Nacional</span> (UTN), establishing a solid foundation in modern development practices.",
     "BIO_P2": "I have experience building RESTful APIs with <span class=\"highlight\">Spring Boot</span>, frontend development with <span class=\"highlight\">Angular</span>, applying design patterns, clean architecture, and agile methodologies within multidisciplinary teams. I enjoy tackling complex problems and transforming them into <span class=\"highlight\">scalable and maintainable solutions</span>.",
     "BIO_P3": "My curiosity and proactivity constantly push me to dive deep into <span class=\"highlight\">Research and Development (R&D)</span> in unknown areas. This has led me to tackle challenging projects, ranging from video game modding and reverse engineering to the implementation of <span class=\"highlight\">RAG models</span> integrating Artificial Intelligence."
   },
@@ -30,6 +30,9 @@
       { "name": "Angular", "icon": "fa-brands fa-angular" },
       { "name": "MySQL", "icon": "fa-solid fa-server" },
       { "name": "Postman", "icon": "fa-solid fa-rocket" },
+      { "name": "Docker", "icon": "fa-brands fa-docker" },
+      { "name": "Render", "icon": "fa-solid fa-cloud" },
+      { "name": "Vercel", "icon": "fa-solid fa-caret-up" },
       { "name": "Jira / Trello", "icon": "fa-brands fa-trello" },
       { "name": "Git", "icon": "fa-brands fa-git" },
       { "name": "GitHub", "icon": "fa-brands fa-github" },
@@ -48,7 +51,17 @@
     "VIEW_CODE": "Source Code",
     "VIEW_LIVE": "Live Demo",
     "EMPTY_MESSAGE": "I am currently documenting my repositories. My projects will be available here soon! Work in progress 🚧",
-    "ITEMS": []
+    "ITEMS": [
+      {
+        "title": "MiViandita",
+        "description": "Comprehensive platform for managing food delivery orders, connecting entrepreneurs and customers. Built as a modern SPA in Angular (Zoneless + Signals) connected to a RESTful API in Spring Boot. Features JWT authentication, role-based access control (Admin, Owner, Client), automated notifications (Brevo), and image management (Cloudinary). Fully deployed in the cloud using Vercel, Render, and Aiven.",
+        "image": "assets/images/miviandita.png",
+        "tech": ["Angular 17", "Spring Boot", "MySQL","Docker" ,"Render", "Vercel"],
+        "githubFront": "https://github.com/Yoru3971/TP-Final-Progra-IV",
+        "githubBack": "https://github.com/Yoru3971/TP-Final-Progra-III",
+        "demo": "https://miviandita.vercel.app"
+      }
+    ]
   },
   "CONTACT": {
     "TITLE": "Contact",
